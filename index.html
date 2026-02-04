@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca - Dark Neon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕹️ Jogo da Forca - Dark Neon</h1>
+        </header>
+
+        <div id="menu" class="screen active">
+            <input type="text" id="playerName" placeholder="Seu nome">
+            <button id="createRoom">Criar Sala</button>
+            <input type="text" id="roomIdInput" placeholder="ID da sala">
+            <button id="joinRoom">Entrar na Sala</button>
+        </div>
+
+        <div id="game" class="screen">
+            <h2 id="roundInfo">Round 1</h2>
+            <p id="playerTurn"></p>
+            <div id="wordDisplay"></div>
+            <div id="lettersGuessed"></div>
+            <p>Tentativas restantes: <span id="attemptsLeft">6</span></p>
+            <input type="text" id="letterInput" maxlength="1" placeholder="Digite uma letra">
+            <button id="guessLetter">Adivinhar</button>
+            <p id="feedback"></p>
+            <div id="scoreBoard">
+                <p>Jogador 1: <span id="score1">0</span></p>
+                <p>Jogador 2: <span id="score2">0</span></p>
+            </div>
+        </div>
+
+        <div id="endScreen" class="screen">
+            <h2 id="endMessage"></h2>
+            <button id="restart">Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

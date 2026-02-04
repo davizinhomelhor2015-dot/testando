@@ -1,0 +1,84 @@
+:root {
+    --bg-color: #0a0a0a;
+    --neon-correct: #00fff7;
+    --neon-wrong: #ff0066;
+    --neon-title: #9b00ff;
+    --neon-button: #ff00ff;
+    --font: 'Orbitron', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    color: var(--neon-correct);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--neon-title);
+    text-shadow: 0 0 10px var(--neon-title);
+    margin-bottom: 20px;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+input, button {
+    margin: 10px 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+}
+
+input {
+    width: 70%;
+}
+
+button {
+    background-color: var(--neon-button);
+    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 20px var(--neon-button);
+    transform: scale(1.05);
+}
+
+#wordDisplay {
+    font-size: 2em;
+    letter-spacing: 10px;
+    margin: 20px 0;
+}
+
+#lettersGuessed {
+    margin: 10px 0;
+}
+
+#scoreBoard p {
+    margin: 5px 0;
+}
